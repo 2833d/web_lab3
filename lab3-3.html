@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串处理与加密</title>
+    <style>
+        body {
+            font-family: "Courier New", monospace;
+            font-size: 18px;
+            margin: 40px;
+            line-height: 2;
+        }
+        .line {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="line" id="line1"></div>
+    <div class="line" id="line2"></div>
+    <div class="line" id="line3"></div>
+
+    <script>
+        // 原始字符串
+        var original = "The Quick Brown Fox.";
+
+        // 第一行：原字符串
+        document.getElementById("line1").textContent = original;
+
+        // 第二行：构造小写字符串，Brown->red
+        var constructed = original.toLowerCase().replace("brown", "red");
+        document.getElementById("line2").textContent = constructed;
+
+        // 第三行：循环移位加密（shift=5）
+        // a->f, b->g, ..., v->a, w->b, x->c, y->d, z->e
+        var encrypted = "";
+        for (var i = 0; i < constructed.length; i++) {
+            var ch = constructed.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                // 计算移位后的字符
+                var code = ch.charCodeAt(0) - 'a'.charCodeAt(0); // 0-25
+                var shifted = (code + 5) % 26;
+                encrypted += String.fromCharCode('a'.charCodeAt(0) + shifted);
+            } else {
+                // 非字母字符不变
+                encrypted += ch;
+            }
+        }
+        document.getElementById("line3").textContent = encrypted;
+    </script>
+</body>
+</html>

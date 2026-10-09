@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>仲恺农业工程学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "SimSun", sans-serif;
+            font-size: 20px;
+            background-color: #fff;
+        }
+        /* ①container：居中，width=920px */
+        .container {
+            width: 920px;
+            margin: 0 auto;
+        }
+        /* 顶部图片 */
+        .header {
+            width: 100%;
+        }
+        .header img {
+            width: 100%;
+            display: block;
+        }
+        /* 导航菜单栏 */
+        .menu {
+            display: flex;
+            list-style: none;
+            background-color: #4a9eff;
+            width: 100%;
+        }
+        .menu li {
+            flex: 1;
+            text-align: center;
+            padding: 8px 0;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        /* ④鼠标悬停：变色、加粗、字体+1px */
+        .menu li:hover {
+            color: yellow;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        /* 三栏布局 */
+        .main-layout {
+            display: flex;
+            width: 100%;
+        }
+        /* ②左侧栏：220px，高300px，超出显示滑动条 */
+        .left-sidebar {
+            width: 220px;
+            height: 300px;
+            overflow: auto;
+            padding: 10px;
+        }
+        /* ②内容主体：480px */
+        .content {
+            width: 480px;
+            padding: 10px;
+        }
+        /* ②右侧栏：220px，高250px，超出不显示 */
+        .right-sidebar {
+            width: 220px;
+            height: 250px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .left-sidebar h3, .right-sidebar h3 {
+            font-size: 16px;
+            color: #0066cc;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .left-sidebar p, .right-sidebar p {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .content h2 {
+            font-size: 20px;
+            color: #cc0000;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .content p {
+            font-size: 14px;
+            line-height: 1.8;
+            text-indent: 2em;
+            margin-bottom: 10px;
+        }
+        /* 底部栏 */
+        .footer {
+            width: 100%;
+            background-color: #4a9eff;
+            text-align: center;
+            /* ①底部栏字体14px */
+            font-size: 14px;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 顶部图片 -->
+        <div class="header">
+            <img src="header.jpg" alt="仲恺农业工程学院">
+        </div>
+
+        <!-- 导航菜单栏 -->
+        <ul class="menu">
+            <li>学校概况<br><small>Survey</small></li>
+            <li>仲园新闻<br><small>News</small></li>
+            <li>招生信息<br><small>Recruit</small></li>
+            <li>最新公告<br><small>Bulletin</small></li>
+            <li>院系结构<br><small>Hiberarchy</small></li>
+            <li>网络服务<br><small>Service</small></li>
+            <li>联系我们<br><small>Contact</small></li>
+        </ul>
+
+        <!-- 三栏布局 -->
+        <div class="main-layout">
+            <!-- 左侧栏 -->
+            <div class="left-sidebar">
+                <h3>学校领导</h3>
+                <p>1987年4月，根据国家副主席王震提议，经中共广东省委同意，成立了学校董事会。</p>
+                <p>王震任名誉董事长。</p>
+                <p>广东省省长叶选平任第一届董事会董事长。</p>
+                <p>此后，历届学校董事长均由在任广东省省长担任。</p>
+                <p>卢瑞华等先后任学校董事会董事长。</p>
+                <p>董事会成员包含有国家领导人、省部级领导以及港澳知名人士。</p>
+                <p>党和国家领导人叶剑英、邓小平、杨尚昆、王震先后为校园内的廖仲恺何香凝纪念馆、廖仲恺铜像、何香凝汉白玉塑像和廖仲恺纪念碑题字。</p>
+                <p>国家主席杨尚昆，全国人大常委会副委员长廖承志、何鲁丽、周铁农，全国政协副主席廖晖、霍英东、马万祺等多次亲临学校视察指导工作。</p>
+                <p>海内外各界人士深怀对廖仲恺、何香凝及其开创事业的崇敬和景仰，不断给予精神和物质上的大力支持。</p>
+                <p>霍英东、马万祺、何厚铧、崔世安、曾宪梓、何鸿燊、杨钊、刘宇新等一批港澳社会贤达为学校捐资兴建实验楼、图书馆、教学楼等，添置教学科研和医疗卫生设备，设立奖教学金，为学校办出特色、办出水平不遗余力。</p>
+            </div>
+
+            <!-- 内容主体 -->
+            <div class="content">
+                <h2>仲恺农业工程学院</h2>
+                <p>仲恺农业工程学院是一所以农、工学科为优势，农、工、理、经、管、文协调发展的多科性省属本科大学。学校坐落在历史文化名城——广州，校园集云山之神秀，汇珠水之灵气，是读书治学的理想园地。</p>
+                <p>学校前身为仲恺农工学校，是第一次国共合作时期，近代民主革命著名的政治活动家何香凝先生等提议、国民党中央为纪念廖仲恺先生爱护农工的意愿而决定创办的。学校于1927年招生，何香凝先生首任校长15年。1984年，经教育部、农牧渔业部批准，学校升格为本科院校，定名"仲恺农业技术学院"，国家副主席王震同志题写校名。2008年3月，经教育部批准，更名"仲恺农业工程学院"。</p>
+            </div>
+
+            <!-- 右侧栏 -->
+            <div class="right-sidebar">
+                <h3>学校荣誉</h3>
+                <p>近年来，学校先后被评为全国暑期"三下乡"社会实践先进单位、广东省回大学生开乡技展农业科级下乡活动先进单位、广东省青年志愿服务优秀集体、广东省教育系统纪检监察</p>
+            </div>
+        </div>
+
+        <!-- 底部栏 -->
+        <div class="footer">
+            粤ICP备05008893号 Copyright ©2008 中国·广东·仲恺农业工程学院 邮编:510225 Tel:+8620-89003114
+        </div>
+    </div>
+
+</body>
+</html>
